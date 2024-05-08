@@ -28,9 +28,7 @@
 
 
 
-<div id="courses">
 
-</div>
 </div>
 </body>
 <script>
@@ -42,18 +40,8 @@ document.getElementById('studentsForm').addEventListener('submit',function(event
     console.log(courseName,studentName,lechallName)
 
 
-    var courseDetails = document.createElement('div')
-    var textContent = 'Course:' + courseName + " " + 'Name:' + studentName + " " + 'Lecture Hall:'  + lechallName;
-    courseDetails.textContent = textContent;
 
-    courseDetails.classList.add('alert', 'alert-info')
-
-    document.getElementById('courses').appendChild(courseDetails)
-
-    console.log(courseDetails)
-
-    document.getElementById('courses').value = '';
-
+    
 })
 
 
