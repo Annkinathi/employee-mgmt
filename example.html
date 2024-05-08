@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles here if needed */
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Task Manager</h1>
+    <form id="taskForm">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter task..." id="taskInput">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Add Task</button>
+        </div>
+      </div>
+    </form>
+    
+    <!-- Task List Container -->
+    <div id="taskList" class="mt-3">
+        <div></div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('taskForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the value of the input field
+      var taskInput = document.getElementById('taskInput').value;
+
+      // Print the input value to the console
+      console.log('Task:', taskInput);
+
+      //Create a new task entry element
+      var taskEntry = document.createElement('div');
+      console.log(taskEntry)
+    //   taskEntry.textContent = taskInput;
+    //   taskEntry.classList.add('alert', 'alert-primary', 'mt-2');
+
+    
+
+      
+
+      // Append the new task entry to the task list container
+      document.getElementById('taskList').appendChild(taskEntry);
+
+      // Clear the input field
+      document.getElementById('taskInput').value = '';
+    });
+  </script>
+</body>
+</html>
