@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>BOOK RECORD KEEPING</title>
+</head>
+<h1>Books Borrowed</h1>
+
+<body>
+<div class="container mt-3">
+    <form id="bookForm" form-control="mt-4" >
+        <label for="borrowerName">borrower Name</label>
+        <input id="borrowerName" type="text" class="form-control mb-3"> 
+        
+
+
+
+        <label for="bookId">book Id</label>
+        <input id="bookId"  type="number" class="form-control mb-3"> 
+        
+
+        <!-- <label for="dateTime">Date</label>
+        <input id="dateTime" type="date" class="form-control mb-3"> 
+         -->
+
+        <label for="bookTitle">Title of the book</label>
+        <input id="bookTitle" type="text" class="form-control mb-3"> 
+       
+        <input type="submit" value="add record" class="btn btn-outline-primary">
+
+        
+
+
+
+
+    </form>
+    
+</div>
+
+<script>
+
+document.getElementById('bookForm').addEventListener('submit', function(event){
+    event.preventDefault()
+
+    var borrower=document.getElementById("borrowerName").value
+    var title=document.getElementById("bookTitle").value
+    var id=document.getElementById("bookId").value
+    var date = new Date();
+    
+
+    console.log(borrower,title,id,date)
+
+
+})
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -26,6 +26,9 @@
     <input type="submit" value="Add student">
 </form>
 
+<div id="course_list">
+</div>
+
 
 
 
@@ -38,6 +41,21 @@ document.getElementById('studentsForm').addEventListener('submit',function(event
     var studentName=document.getElementById('student_name').value
     var lechallName=document.getElementById('lechall_name').value
     console.log(courseName,studentName,lechallName)
+    
+    
+    var courseDetail = document.createElement('div')
+    var course_item='course: '+" "+courseName+'Name: '+"  "+studentName+"  "+'lechall: '+" "+
+    lechallName;
+    
+    courseDetail.textContent = course_item 
+    
+    
+    courseDetail.classList.add('alert', 'alert-info');
+    
+    document.getElementById('course_list').appendChild(courseDetail)
+    console.log(courseDetail)
+     
+
 
 
 
